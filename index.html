@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentGrid — AI Strategy & Transformation</title>
+  <meta name="description" content="AgentGrid helps leadership teams build the strategy and clarity needed to navigate the AI transition. Strategy-first advisory for C-Suite and R&D." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-bar" id="scrollBar"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="10" height="10" rx="2" stroke="url(#ng)" stroke-width="1.5"/>
+          <rect x="17" y="1" width="10" height="10" rx="2" stroke="url(#ng)" stroke-width="1.5"/>
+          <rect x="1" y="17" width="10" height="10" rx="2" stroke="url(#ng)" stroke-width="1.5"/>
+          <rect x="17" y="17" width="10" height="10" rx="2" fill="url(#ng)"/>
+          <defs>
+            <linearGradient id="ng" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>AgentGrid</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#serve" class="nav-link">Who We Help</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Get in Touch</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#serve" class="mobile-link">Who We Help</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#process" class="mobile-link">Process</a></li>
+        <li><a href="#team" class="mobile-link">Team</a></li>
+        <li><a href="#contact" class="mobile-link mobile-link--cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-pulse"></span>
+        AI Strategy Advisory
+      </div>
+
+      <h1 class="hero-heading" id="heroHeading">
+        <div class="line-wrap"><div class="line-inner">Re-Engineering</div></div>
+        <div class="line-wrap"><div class="line-inner">the Organization</div></div>
+        <div class="line-wrap"><div class="line-inner grad-text">for the Generative Era.</div></div>
+      </h1>
+
+      <p class="hero-sub" id="heroSub">
+        We help leadership teams build the strategy, structure, and clarity needed to lead their organizations through AI.
+      </p>
+
+      <div class="hero-ctas" id="heroCtas">
+        <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
+        <a href="#services" class="btn btn-outline">See Our Services</a>
+      </div>
+
+      <div class="hero-stats" id="heroStats">
+        <div class="hstat">
+          <div class="hstat-val"><span class="count" data-target="20">0</span>+</div>
+          <div class="hstat-label">Years Leading R&D</div>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <div class="hstat-val"><span class="count" data-target="100">0</span>+</div>
+          <div class="hstat-label">Engineers Managed</div>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <div class="hstat-val">€<span class="count" data-target="950">0</span>M</div>
+          <div class="hstat-label">Exit Valuation Led</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">About</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="reveal-text">We Don't <span class="grad-text">Consult.</span><br/>We Transform.</h2>
+          <p class="reveal">AgentGrid was built by practitioners who have led AI programs inside fast-moving tech companies. We've lived the chaos of balancing AI ambitions with engineering deadlines, product roadmaps, and data debt.</p>
+          <p class="reveal">We don't hand you a strategy deck and disappear. We work alongside your leadership and teams to build a strategy your people can own, execute, and evolve — long after our engagement ends.</p>
+        </div>
+        <div class="about-right reveal">
+          <div class="about-quote-block">
+            <div class="about-quote-mark">"</div>
+            <p class="about-quote-text">Built for the Teams Doing the Real Work</p>
+            <span class="about-quote-sub">AI transformation doesn't happen at the C-suite level alone. It happens inside your R&D and engineering departments. That's where we focus.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE SERVE ===== -->
+  <section class="serve section" id="serve">
+    <div class="container">
+      <div class="section-label reveal">Who We Help</div>
+      <h2 class="section-heading reveal-text">Built for the People<br/>Making the <span class="grad-text">Decisions</span></h2>
+      <div class="serve-grid">
+        <div class="serve-card reveal-up">
+          <div class="serve-num">01</div>
+          <h3>Startups</h3>
+          <p>Moving fast and need to make the right AI bets early, without wasting runway on the wrong tools or experiments.</p>
+          <div class="serve-line"></div>
+        </div>
+        <div class="serve-card reveal-up" style="--delay:0.12s">
+          <div class="serve-num">02</div>
+          <h3>Mid-Size Companies</h3>
+          <p>Scaling teams that need a clear AI strategy before complexity makes it harder to change course.</p>
+          <div class="serve-line"></div>
+        </div>
+        <div class="serve-card reveal-up" style="--delay:0.24s">
+          <div class="serve-num">03</div>
+          <h3>Enterprise</h3>
+          <p>Large organizations navigating internal alignment, governance, and the challenge of moving quickly at scale.</p>
+          <div class="serve-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section dark-section" id="services">
+    <div class="container">
+      <div class="section-label reveal">Services</div>
+      <h2 class="section-heading reveal-text">Everything You Need<br/>To <span class="grad-text">Lead AI</span></h2>
+      <p class="section-sub reveal">End-to-end strategic advisory — from first assessment to long-term guidance.</p>
+      <div class="svc-grid">
+
+        <div class="svc-card reveal-up">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI Readiness Assessment</h3>
+          <p>A deep diagnostic of where your organization stands today: strategy gaps, tooling, processes, and team readiness. You get a clear picture of where you are and what needs to change.</p>
+        </div>
+
+        <div class="svc-card reveal-up" style="--delay:0.06s">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI Strategy & Roadmap</h3>
+          <p>Clear direction, prioritized initiatives, and a multi-quarter plan with measurable milestones and KPIs — so leadership knows exactly where the organization is going and how to get there.</p>
+        </div>
+
+        <div class="svc-card reveal-up" style="--delay:0.12s">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 8v3m0 3v.01M8 11h3m3 0h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Use Case Discovery & Prioritization</h3>
+          <p>Structured sessions to surface high-value AI opportunities across your business and rank them by ROI, feasibility, and strategic fit. Find the right bets before committing resources.</p>
+        </div>
+
+        <div class="svc-card reveal-up" style="--delay:0.18s">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Organization Enablement</h3>
+          <p>Executive AI literacy programs, role definition for AI-native teams, and a change management framework that builds a culture ready to lead AI — not just adopt it.</p>
+        </div>
+
+        <div class="svc-card reveal-up" style="--delay:0.24s">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Vendor & Technology Advisory</h3>
+          <p>Independent, vendor-neutral guidance on model selection, platform evaluation, and build-vs-buy decisions — so you invest in the right tools for your specific context, not the loudest vendor.</p>
+        </div>
+
+        <div class="svc-card reveal-up" style="--delay:0.30s">
+          <div class="svc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>AI Governance & Risk</h3>
+          <p>Policies, accountability frameworks, and risk management so your organization moves fast — and responsibly. Covering data usage, regulatory compliance, and operational risk.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-label reveal">Our Process</div>
+      <h2 class="section-heading reveal-text">From Assessment<br/>to <span class="grad-text">Ongoing Advisory</span></h2>
+      <div class="process-track">
+        <div class="process-step reveal-up">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Assess</h3>
+            <p>We start by understanding your business, your team, and where you stand today. No assumptions, no templates — a real diagnostic.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" style="--delay:0.1s">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Align</h3>
+            <p>We work with leadership to define the destination: strategy, goals, KPIs, and the organizational structure needed to get there.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" style="--delay:0.2s">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Plan</h3>
+            <p>We build a concrete roadmap — prioritized initiatives, milestones, resource requirements, and governance framework.</p>
+          </div>
+        </div>
+        <div class="process-step reveal-up" style="--delay:0.3s">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3>Advise</h3>
+            <p>We stay alongside your leadership team as execution begins — reviewing decisions, adjusting course, and ensuring the strategy stays on track.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY AGENTGRID ===== -->
+  <section class="why section" id="why">
+    <div class="container">
+      <div class="section-label reveal">Why AgentGrid</div>
+      <h2 class="section-heading reveal-text">What Makes Us<br/><span class="grad-text">Different</span></h2>
+      <div class="why-grid">
+        <div class="why-item reveal-up">
+          <div class="why-num">01</div>
+          <h3>Strategy First, Always</h3>
+          <p>We don't sell tools, implement software, or take vendor commissions. Our only output is clear thinking and actionable strategy.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.1s">
+          <div class="why-num">02</div>
+          <h3>Built for Leadership</h3>
+          <p>Most AI consultants talk to engineers. We speak the language of business — ROI, risk, org structure, and competitive positioning.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.15s">
+          <div class="why-num">03</div>
+          <h3>Focused Expertise</h3>
+          <p>We work exclusively in AI transformation. Not digital transformation broadly, not IT consulting — this is all we do.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.2s">
+          <div class="why-num">04</div>
+          <h3>Independent & Objective</h3>
+          <p>Our recommendations are driven solely by what's right for your organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM ===== -->
+  <section class="team section dark-section" id="team">
+    <div class="container">
+      <div class="section-label reveal">The Team</div>
+      <div class="team-grid">
+        <div class="team-photo-col reveal-up">
+          <div class="team-photo-wrap">
+            <img src="assets/shlomi.jpg" alt="Shlomi Otmazgin — Founder, AgentGrid" />
+            <div class="team-photo-glow"></div>
+          </div>
+          <a href="https://www.linkedin.com/in/shlomiot/" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+        <div class="team-bio">
+          <h2 class="reveal-text">Shlomi Otmazgin<br/><span class="grad-text">Founder, AgentGrid</span></h2>
+          <p class="reveal">With over 20 years leading R&D organizations — from early-stage startups to global enterprises — Shlomi has operated at every level of the engineering and product stack.</p>
+          <p class="reveal">As CTO of Yad2, he built and scaled a 100+ engineer organization from the ground up, pioneered AI-native workflows by deploying autonomous agents and Copilots across the entire SDLC, and played a pivotal role in the company's €950M acquisition by Apax Partners.</p>
+          <div class="team-career reveal">
+            <div class="career-item">
+              <span class="career-co">Yad2</span>
+              <span class="career-role">CTO · 2019–2026</span>
+            </div>
+            <div class="career-item">
+              <span class="career-co">G Medical Innovations</span>
+              <span class="career-role">VP R&D · 2017–2018</span>
+            </div>
+            <div class="career-item">
+              <span class="career-co">Colmobil</span>
+              <span class="career-role">R&D Director · 2014–2017</span>
+            </div>
+            <div class="career-item">
+              <span class="career-co">Umoove</span>
+              <span class="career-role">VP R&D · 2012–2014</span>
+            </div>
+          </div>
+          <blockquote class="team-quote reveal">
+            "AgentGrid was founded on one belief: the companies that win the AI transition won't be the ones with the most tools — they'll be the ones with the clearest strategy."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section dark-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <div class="section-label reveal">Contact</div>
+          <h2 class="reveal-text">Ready to Build Your<br/><span class="grad-text">AI Strategy?</span></h2>
+          <p class="reveal">Ready to talk. Let's do it.</p>
+        </div>
+        <form class="contact-form reveal-up" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="femail">Work Email</label>
+              <input type="email" id="femail" name="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fcompany">Company</label>
+              <input type="text" id="fcompany" name="company" placeholder="Company name" autocomplete="organization" />
+            </div>
+            <div class="form-field">
+              <label for="frole">Role</label>
+              <input type="text" id="frole" name="role" placeholder="Your role" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" placeholder="Tell us what you're working on..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="formSubmit">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-arrow">→</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Message sent. We'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="10" height="10" rx="2" stroke="url(#nf)" stroke-width="1.5"/>
+              <rect x="17" y="1" width="10" height="10" rx="2" stroke="url(#nf)" stroke-width="1.5"/>
+              <rect x="1" y="17" width="10" height="10" rx="2" stroke="url(#nf)" stroke-width="1.5"/>
+              <rect x="17" y="17" width="10" height="10" rx="2" fill="url(#nf)"/>
+              <defs>
+                <linearGradient id="nf" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>AgentGrid</span>
+          </a>
+          <p>Re-Engineering organizations<br/>for the Generative Era.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#services">AI Strategy</a>
+            <a href="#services">Governance & Risk</a>
+            <a href="#services">Use Case Discovery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="https://www.linkedin.com/in/shlomiot/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:hello@agentgrid.ai">hello@agentgrid.ai</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 AgentGrid. All rights reserved.</span>
+        <a href="https://www.linkedin.com/in/shlomiot/" target="_blank" rel="noopener" class="footer-li">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
