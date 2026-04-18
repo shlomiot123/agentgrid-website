@@ -286,15 +286,18 @@ function initForm() {
     btn.querySelector('.btn-text').textContent = 'Sending...';
 
     const data = new FormData(form);
+    data.append('access_key', '358ed785-0ccc-4750-b47e-5d5a5c6bea48');
+    data.append('subject',    'New contact from AgentGrid');
+    data.append('from_name',  'AgentGrid Website');
 
     try {
-      const res = await fetch('https://formspree.io/f/xpzgeoqk', {
+      const res  = await fetch('https://api.web3forms.com/submit', {
         method:  'POST',
         body:    data,
-        headers: { 'Accept': 'application/json' },
       });
+      const json = await res.json();
 
-      if (res.ok) {
+      if (json.success) {
         form.reset();
         btn.style.display = 'none';
         success.classList.add('show');
