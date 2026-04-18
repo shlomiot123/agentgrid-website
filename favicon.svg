@@ -7,7 +7,7 @@
     <path id="orbit-sm" d="M 28,16 A 12,4.7,0,1,0,4,16 A 12,4.7,0,1,0,28,16"/>
   </defs>
   <!-- dark background so elements pop -->
-  <rect width="32" height="32" rx="7" fill="#050510"/>
+  <rect width="32" height="32" rx="7" fill="none"/>
   <!-- large circular orbit -->
   <ellipse cx="16" cy="16" rx="12" ry="12" stroke="#38bdf8" stroke-width="2.2" fill="none"/>
   <!-- tilted elliptical orbit -->
