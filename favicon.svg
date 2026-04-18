@@ -6,24 +6,24 @@
     </linearGradient>
     <path id="orbit-sm" d="M 28,16 A 12,4.7,0,1,0,4,16 A 12,4.7,0,1,0,28,16"/>
   </defs>
-  <!-- background -->
-  <rect width="32" height="32" rx="7" fill="none"/>
+  <!-- dark background so elements pop -->
+  <rect width="32" height="32" rx="7" fill="#050510"/>
   <!-- large circular orbit -->
-  <ellipse cx="16" cy="16" rx="12" ry="12" stroke="#38bdf8" stroke-width="1.8" fill="none" opacity="0.9"/>
+  <ellipse cx="16" cy="16" rx="12" ry="12" stroke="#38bdf8" stroke-width="2.2" fill="none"/>
   <!-- tilted elliptical orbit -->
-  <ellipse cx="16" cy="16" rx="12" ry="4.7" stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.85" transform="rotate(-28 16 16)"/>
+  <ellipse cx="16" cy="16" rx="12" ry="4.7" stroke="#a855f7" stroke-width="2" fill="none" transform="rotate(-28 16 16)"/>
   <!-- nucleus -->
-  <circle cx="16" cy="16" r="3" fill="url(#g)"/>
-  <circle cx="16" cy="16" r="1.5" fill="#fff"/>
+  <circle cx="16" cy="16" r="3.5" fill="url(#g)"/>
+  <circle cx="16" cy="16" r="1.8" fill="#fff"/>
   <!-- dot on large orbit -->
   <g>
-    <circle cx="16" cy="4" r="2.5" fill="#38bdf8">
+    <circle cx="16" cy="4" r="3" fill="#38bdf8">
       <animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="4s" repeatCount="indefinite"/>
     </circle>
   </g>
   <!-- dot on small tilted orbit -->
   <g transform="rotate(-28 16 16)">
-    <circle r="2" fill="#a855f7">
+    <circle r="2.5" fill="#a855f7">
       <animateMotion dur="7s" repeatCount="indefinite">
         <mpath href="#orbit-sm"/>
       </animateMotion>
