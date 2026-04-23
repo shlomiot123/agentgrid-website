@@ -21,29 +21,8 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <svg width="256" height="50" viewBox="0 0 256 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="gr-nav" x1="148" y1="0" x2="188" y2="0" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a855f7"/>
-            </linearGradient>
-            <filter id="glow-nav" x="-80%" y="-80%" width="260%" height="260%">
-              <feGaussianBlur stdDeviation="3.5" result="b"/>
-              <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <path id="small-orbit-nav" d="M 40,25 A 18,7,0,1,0,4,25 A 18,7,0,1,0,40,25"/>
-          </defs>
-          <ellipse cx="22" cy="25" rx="18" ry="18" stroke="#0ea5e9" stroke-width="0.9" opacity="0.4"/>
-          <ellipse cx="22" cy="25" rx="18" ry="7" stroke="#38bdf8" stroke-width="0.7" opacity="0.3" transform="rotate(-28 22 25)"/>
-          <circle cx="22" cy="25" r="2.6" fill="#38bdf8"/><circle cx="22" cy="25" r="1.3" fill="#fff"/>
-          <g><circle cx="22" cy="7" r="2" fill="#0ea5e9"><animateTransform attributeName="transform" type="rotate" from="0 22 25" to="360 22 25" dur="4s" repeatCount="indefinite"/></circle></g>
-          <g transform="rotate(-28 22 25)"><circle r="1.5" fill="#a855f7"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#small-orbit-nav"/></animateMotion></circle></g>
-          <!-- base text -->
-          <text font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5">
-            <tspan x="48" y="34" fill="#ffffff">velloris</tspan><tspan fill="url(#gr-nav)">.ai</tspan>
-          </text>
-          <!-- glow overlay on .ai -->
-          <text x="48" y="34" font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5" filter="url(#glow-nav)" opacity="0">
-            <animate attributeName="opacity" values="0;0;0;0.9;1;0.9;0;0;0" keyTimes="0;0.18;0.36;0.46;0.5;0.54;0.64;0.82;1" dur="4s" repeatCount="indefinite"/>
-            <tspan fill-opacity="0">velloris</tspan><tspan fill="url(#gr-nav)">.ai</tspan>
+          <text font-family="'Courier New', Courier, monospace" font-size="30" font-weight="700">
+            <tspan x="4" y="36" fill="#8B5CF6">&gt; </tspan><tspan fill="#FFFFFF">velloris</tspan><tspan fill="#22D3EE">.ai</tspan>
           </text>
         </svg>
       </a>
@@ -112,7 +91,7 @@
   <section class="about section" id="about">
     <canvas class="section-wave"></canvas>
     <div class="container">
-      <div class="section-label reveal">About</div>
+      <div class="section-label reveal" style="--label-color:#8B5CF6">About</div>
       <div class="about-grid">
         <div class="about-left">
           <h2 class="reveal-text">We Don't <span class="grad-text">Consult.</span><br/>We Transform.</h2>
@@ -134,7 +113,7 @@
   <section class="serve section" id="serve">
     <canvas class="section-wave"></canvas>
     <div class="container">
-      <div class="section-label reveal">Who We Help</div>
+      <div class="section-label reveal" style="--label-color:#22D3EE">Who We Help</div>
       <h2 class="section-heading reveal-text">Built for the People<br/>Making the <span class="grad-text">Decisions</span></h2>
       <div class="serve-grid">
         <div class="serve-card reveal-up">
@@ -192,7 +171,7 @@
   <section class="services section dark-section" id="services">
     <canvas class="section-wave"></canvas>
     <div class="container">
-      <div class="section-label reveal">Services</div>
+      <div class="section-label reveal" style="--label-color:#3B82F6">Services</div>
       <h2 class="section-heading reveal-text">Everything You Need<br/>To <span class="grad-text">Lead AI</span></h2>
       <p class="section-sub reveal">End-to-end strategic advisory — from first assessment to long-term guidance.</p>
       <div class="svc-grid">
@@ -253,7 +232,7 @@
   <section class="process section" id="process">
     <canvas class="section-wave"></canvas>
     <div class="container">
-      <div class="section-label reveal">Our Process</div>
+      <div class="section-label reveal" style="--label-color:#7C3AED">Our Process</div>
       <h2 class="section-heading reveal-text">From Assessment<br/>to <span class="grad-text">Ongoing Advisory</span></h2>
       <div class="process-track">
         <div class="process-step reveal-up">
@@ -292,7 +271,7 @@
   <section class="why section" id="why">
     <canvas class="section-wave"></canvas>
     <div class="container">
-      <div class="section-label reveal">Why Velloris</div>
+      <div class="section-label reveal" style="--label-color:#0EA5E9">Why Velloris</div>
       <h2 class="section-heading reveal-text">What Makes Us<br/><span class="grad-text">Different</span></h2>
       <div class="why-grid">
         <div class="why-item reveal-up">
@@ -351,7 +330,7 @@
   <section class="team section dark-section" id="team">
     <canvas class="section-wave"></canvas>
     <div class="container">
-      <div class="section-label reveal">Behind Velloris</div>
+      <div class="section-label reveal" style="--label-color:#6366F1">Behind Velloris</div>
       <div class="team-grid">
         <div class="team-photo-col reveal-up">
           <div class="team-photo-wrap">
@@ -399,7 +378,7 @@
     <div class="container">
       <div class="contact-inner">
         <div class="contact-text">
-          <div class="section-label reveal">Contact</div>
+          <div class="section-label reveal" style="--label-color:#A78BFA">Contact</div>
           <h2 class="reveal-text">Ready to Build Your<br/><span class="grad-text">AI Strategy?</span></h2>
           <p class="reveal">Ready to talk. Let's do it.</p>
         </div>
@@ -448,27 +427,8 @@
         <div class="footer-brand">
           <a href="#" class="nav-logo">
             <svg width="230" height="44" viewBox="0 0 256 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="gr-footer" x1="148" y1="0" x2="188" y2="0" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a855f7"/>
-                </linearGradient>
-                <filter id="glow-footer" x="-80%" y="-80%" width="260%" height="260%">
-                  <feGaussianBlur stdDeviation="3.5" result="b"/>
-                  <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                </filter>
-                <path id="small-orbit-footer" d="M 40,25 A 18,7,0,1,0,4,25 A 18,7,0,1,0,40,25"/>
-              </defs>
-              <ellipse cx="22" cy="25" rx="18" ry="18" stroke="#0ea5e9" stroke-width="0.9" opacity="0.4"/>
-              <ellipse cx="22" cy="25" rx="18" ry="7" stroke="#38bdf8" stroke-width="0.7" opacity="0.3" transform="rotate(-28 22 25)"/>
-              <circle cx="22" cy="25" r="2.6" fill="#38bdf8"/><circle cx="22" cy="25" r="1.3" fill="#fff"/>
-              <g><circle cx="22" cy="7" r="2" fill="#0ea5e9"><animateTransform attributeName="transform" type="rotate" from="0 22 25" to="360 22 25" dur="4s" repeatCount="indefinite"/></circle></g>
-              <g transform="rotate(-28 22 25)"><circle r="1.5" fill="#a855f7"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#small-orbit-footer"/></animateMotion></circle></g>
-              <text font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5">
-                <tspan x="48" y="34" fill="#ffffff">velloris</tspan><tspan fill="url(#gr-footer)">.ai</tspan>
-              </text>
-              <text x="48" y="34" font-family="'Inter',system-ui,sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5" filter="url(#glow-footer)" opacity="0">
-                <animate attributeName="opacity" values="0;0;0;0.9;1;0.9;0;0;0" keyTimes="0;0.18;0.36;0.46;0.5;0.54;0.64;0.82;1" dur="4s" repeatCount="indefinite"/>
-                <tspan fill-opacity="0">velloris</tspan><tspan fill="url(#gr-footer)">.ai</tspan>
+              <text font-family="'Courier New', Courier, monospace" font-size="30" font-weight="700">
+                <tspan x="4" y="36" fill="#8B5CF6">&gt; </tspan><tspan fill="#FFFFFF">velloris</tspan><tspan fill="#22D3EE">.ai</tspan>
               </text>
             </svg>
           </a>

@@ -118,6 +118,7 @@ p  { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.7; color: var(--muted);
 
 /* ---- SECTION LABELS ---- */
 .section-label {
+  --label-color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -125,18 +126,18 @@ p  { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.7; color: var(--muted);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--label-color);
   margin-bottom: 20px;
 }
 .section-label::before {
-  content: '';
-  width: 24px;
-  height: 1.5px;
-  background: var(--accent);
-  display: block;
+  content: '>';
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--label-color);
+  line-height: 1;
 }
-.dark-section .section-label { color: rgba(99,102,241,0.9); }
-.dark-section .section-label::before { background: rgba(99,102,241,0.9); }
+.dark-section .section-label { --label-color: rgba(99,102,241,0.9); }
 
 .section-heading { margin-bottom: 20px; }
 .section-sub {
