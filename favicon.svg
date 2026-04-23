@@ -1,9 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs>
-    <linearGradient id="ac" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#22D3EE"/>
-    </linearGradient>
-  </defs>
-  <text x="1" y="26" font-family="'Courier New', Courier, monospace" font-size="28" font-weight="700" fill="url(#ac)">&gt;</text>
+  <!-- > chevron — top half -->
+  <polyline points="6,4 21,13 6,22" fill="none" stroke="#8B5CF6" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- ai — bottom -->
+  <text x="7" y="31" font-family="'Courier New', Courier, monospace" font-size="10.5" font-weight="700" fill="#22D3EE">ai</text>
 </svg>
