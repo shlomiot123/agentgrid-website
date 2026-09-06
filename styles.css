@@ -39,7 +39,7 @@
 
 /* ---- RESET ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
@@ -1309,6 +1309,7 @@ p  { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.7; color: var(--muted);
   gap: 48px;
   align-items: start;
 }
+.acad-grid > * { min-width: 0; }
 .acad-copy { display: flex; flex-direction: column; gap: 18px; }
 .acad-copy h2 {
   font-size: clamp(28px, 3.4vw, 42px);
@@ -1403,7 +1404,7 @@ p  { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.7; color: var(--muted);
 @media (max-width: 980px) {
   .acad-grid { grid-template-columns: 1fr; gap: 32px; }
   .acad-shot { order: -1; max-width: 560px; }
-  .acad-stats { flex-wrap: wrap; }
+  .acad-stats { grid-template-columns: repeat(2, 1fr); row-gap: 12px; }
 }
 @media (max-width: 560px) {
   .acad-chips { grid-template-columns: 1fr; }
